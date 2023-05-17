@@ -48,6 +48,8 @@ Below is a snippet of the README generated using the above responses. Edit the r
 
 ![snippet of a README generated using this app](Develop/img/sample.png)
 
+[Demonstration video](https://drive.google.com/file/d/1IP_8i2X-cYlqFNdoutDIm8cbjIWZ4YYn/view)
+
 ## Credits
 
 README template based on the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide).
