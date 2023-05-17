@@ -1,10 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Array of questions for user input
-// const questions = () =>
-inquirer.prompt([
+const questions = () => ([
     {
         type: 'input',
         name: 'title',
@@ -76,37 +76,6 @@ inquirer.prompt([
 });
 
 // template for README (markdown language)
-const template = 
-`
-# ${title}
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contribution](#contribution)
-* [Tests](#tests)
-* [Credits](#credits)
-* [License](#license)
-* [Contact](#contact)
-
-## Installation
-${installation}
-
-## Usage
-${usage}
-
-## Contribution
-${contribution}
-
-## Credits
-${credits}
-
-## License
-${license}
-
-## Contact
-* GitHub: ${username}
-* Email: ${email}
-`;
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -118,12 +87,15 @@ function writeToFile(fileName, data) {
         console.log('Your README is ready!')
     }
 )};
-writeToFile(fileName, template);
-
-
+writeToFile(fileName);
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    // initiate the inquirer app 
+    const answers = inquirer.prompt(questions);
+    // generate the markdown app (imported from generateMarkdown.js)
+    const generate = generateMarkdown(answers);
+}
 
 // Function call to initialize app
 init();
