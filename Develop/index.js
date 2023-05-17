@@ -2,10 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// sections: Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-
 // Array of questions for user input
-const questions = [{
+const questions = () =>
+inquirer.prompt([
+    {
         type: 'input',
         name: 'name',
         message: 'What is your project (repository) title?',
@@ -61,13 +61,39 @@ const questions = [{
         message: 'What is your email address?',
     },
 
-];
+])
+.then((data) => {
+    const filename = `README-output.md`;
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+});
+
+// template for README (markdown)
+const template = 
+`
+
+`
+
+// function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(`./${fileName.split('').join('')}.md`, data,
+    (err) => {
+        if(err) {
+            console.log(err)
+        }
+        console.log('Your README is ready!')
+    }
+)};
+writeToFile(fileName, template);
+
+
 
 // TODO: Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
 init();
+
+
