@@ -1,5 +1,8 @@
 # a
 
+  ## Description
+  a
+
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribution](#contribution)
@@ -15,15 +18,16 @@
   a
   
   ## Contribution
-  undefined
+  a
   
+  <!-- credits not implemented yet
   ## Credits
-  undefined
+  undefined -->
   
   ## License
-  GNU AGPLv3
+  [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
   
   ## Contact
-  * GitHub: 
+  * GitHub: a
   * Email: a
   

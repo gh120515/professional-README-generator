@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown').generateMarkdown;
-const renderLicense = require('./utils/generateMarkdown').renderLicense;
+// const renderLicense = require('./utils/generateMarkdown').renderLicense;
 const util = require('util');
 
 // Array of questions for user input
@@ -85,7 +85,7 @@ async function init() {
     // initiate the inquirer app 
     const answers = await inquirer.prompt(questions);
     // grab license badges (& links)
-    answers.renderLicense = renderLicense(answers.license);
+    // answers.renderLicense = renderLicense(answers.license);
     // generate the markdown app (imported from generateMarkdown.js)
     const generate = generateMarkdown(answers);
     await createFile('README-DONE.md', generate);
