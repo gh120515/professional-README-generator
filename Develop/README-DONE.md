@@ -1,7 +1,7 @@
-# Funland
+# A cool project
 
   ## Description
-  A repository where fun things happen
+  A cool description
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -10,16 +10,16 @@
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [License](#license)
-  * [Contact](#contact)
+  * [Questions](#questions)
   
   ## Installation
-  To be determined
+  Coming soon!
   
   ## Usage
-  To be determined
+  Coming soon!
   
   ## Contribution
-  Guidelines coming soon!
+  Coming soon!
 
   ## Tests
   N/A
@@ -27,8 +27,8 @@
   ## License
   Licensed under MIT
   
-  ## Contact
+  ## Questions
   Please contact from the below options for any additional questions.
-  * GitHub: github_user
-  * Email: github_user@example.com
+  * GitHub: [gh120515](https://github.com/gh120515)
+  * Email: example@example.com
   

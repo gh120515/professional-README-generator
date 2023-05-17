@@ -44,7 +44,7 @@ function generateMarkdown(data) {
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [License](#license)
-  * [Contact](#contact)
+  * [Questions](#questions)
   
   ## Installation
   ${data.installation}
@@ -61,9 +61,9 @@ function generateMarkdown(data) {
   ## License
   Licensed under ${data.license}
   
-  ## Contact
+  ## Questions
   Please contact from the below options for any additional questions.
-  * GitHub: ${data.username}
+  * GitHub: [${data.username}](https://github.com/${data.username})
   * Email: ${data.email}
   
 `;
