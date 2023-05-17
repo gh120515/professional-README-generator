@@ -1,6 +1,6 @@
 // function to create badges with clickable link
 function renderLicense(license) { 
-  let licenseChoice = `${data.license}`;
+  let licenseChoice = `${license.license}`;
   // If there is no license, return an empty string
   let licenseLink = ''
   if (licenseChoice === 'GNU AGPLv3') {
@@ -39,7 +39,8 @@ function renderLicense(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  let template = 
+  `# ${data.title}
 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -50,28 +51,29 @@ function generateMarkdown(data) {
   * [Contact](#contact)
   
   ## Installation
-  ${installation}
+  ${data.installation}
   
   ## Usage
-  ${usage}
+  ${data.usage}
   
   ## Contribution
-  ${contribution}
+  ${data.contribution}
   
   ## Credits
-  ${credits}
+  ${data.credits}
   
   ## License
-  ${license}
+  ${data.license}
   
   ## Contact
-  * GitHub: ${username}
-  * Email: ${email}
+  * GitHub: ${data.username}
+  * Email: ${data.email}
   
 `;
+  return template;
 }
 
 module.exports = {
-  renderLicense = renderLicense;
-  generateMarkdown = generateMarkdown;
+  renderLicense: renderLicense,
+  generateMarkdown: generateMarkdown,
 };

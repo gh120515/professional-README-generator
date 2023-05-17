@@ -3,9 +3,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown').generateMarkdown;
 const renderLicense = require('./utils/generateMarkdown').renderLicense;
+const util = require('util');
 
 // Array of questions for user input
-const questions = () => ([
+const questions = ([
     {
         type: 'input',
         name: 'title',
@@ -62,42 +63,39 @@ const questions = () => ([
         message: 'What is your email address?',
     },
 
-]).then((
-// read responses from above questions
-    title,
-    description,
-    installation,
-    usage,
-    contributing,
-    tests,
-    license,
-    username,
-    email,
-    ) => {
-});
+])
+// .then((
+// // read responses from above questions
+//     title,
+//     ) => {
+//     writeToFile(title, template);
+// });
 
-// template for README (markdown language)
+
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(`./${fileName.split('').join('')}.md`, data,
-    (err) => {
+    // fs.writeFile(`./${fileName.split('').join('')}.md`, data,
+    fs.writeFile(fileName, data,
+    err => {
         if(err) {
             console.log(err)
         }
         console.log('Your README is ready!')
     }
 )};
-writeToFile(fileName);
 
+
+const createReadme = util.promisify(writeToFile)
 // TODO: Create a function to initialize app
-function init() {
+async function init() {
     // initiate the inquirer app 
-    const answers = inquirer.prompt(questions);
+    const answers = await inquirer.prompt(questions);
     // grab license badges (& links)
     answers.renderLicense = renderLicense(answers.license);
     // generate the markdown app (imported from generateMarkdown.js)
     const generate = generateMarkdown(answers);
+    await createReadme('README-DONE.md', generate);
 };
 
 // Function call to initialize app
