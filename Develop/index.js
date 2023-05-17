@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown').generateMarkdown;
+const renderLicense = require('./utils/generateMarkdown').renderLicense;
 
 // Array of questions for user input
 const questions = () => ([
@@ -93,9 +94,11 @@ writeToFile(fileName);
 function init() {
     // initiate the inquirer app 
     const answers = inquirer.prompt(questions);
+    // grab license badges (& links)
+    answers.renderLicense = renderLicense(answers.license);
     // generate the markdown app (imported from generateMarkdown.js)
     const generate = generateMarkdown(answers);
-}
+};
 
 // Function call to initialize app
 init();
