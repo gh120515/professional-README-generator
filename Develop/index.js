@@ -76,17 +76,15 @@ function writeToFile(fileName, data) {
     }
 )};
 
-// util package to use await on inquirer prompts & README file creation (will result in error otherwise due to code execution order)
+// util package to use await on inquirer prompts & README file creation (allows waiting until promise has been fulfiled)
 const createFile = util.promisify(writeToFile)
-// initialise function on app load (after node index.js)
+// initialise function on app load (after node index.js), async function to allow for the promise
 async function init() {
     // try & catch to log error on failure
     try {
-    // initiate the inquirer app 
+    // initiate the inquirer module 
     const answers = await inquirer.prompt(questions);
-    // grab license badges (& links)
-    // answers.renderLicense = renderLicense(answers.license);
-    // generate the markdown app (imported from generateMarkdown.js)
+    // generate the markdown app (template imported from generateMarkdown.js)
     const generate = generateMarkdown(answers);
     await createFile('README-DONE.md', generate);
     } catch (err) {

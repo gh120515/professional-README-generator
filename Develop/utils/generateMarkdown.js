@@ -14,15 +14,15 @@ function generateMarkdown(data) {
   };
   if (licenseChoice === 'GNU LGPLv3') {
     licenseChoice = 'GNULGPLv3';
-    licenseLink = '![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)';
+    licenseLink = '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)';
   };
   if (licenseChoice === 'Mozilla') {
     licenseChoice = 'MozillaPublicLicense2.0';
-    licenseLink = '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+    licenseLink = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
   };
   if (licenseChoice === 'MIT') {
     licenseChoice = 'MITLicense';
-    licenseLink = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    licenseLink = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
   };
   if (licenseChoice === 'Apache') {
     licenseChoice = 'ApacheLicense2.0';
@@ -43,7 +43,6 @@ function generateMarkdown(data) {
   * [Usage](#usage)
   * [Contribution](#contribution)
   * [Tests](#tests)
-  <!-- * [Credits](#credits) -->
   * [License](#license)
   * [Contact](#contact)
   
@@ -59,14 +58,11 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   
-  <!-- credits not implemented yet
-  ## Credits
-  ${data.credits} -->
-  
   ## License
-  ${data.license}
+  Licensed under ${data.license}
   
   ## Contact
+  Please contact from the below options for any additional questions.
   * GitHub: ${data.username}
   * Email: ${data.email}
   

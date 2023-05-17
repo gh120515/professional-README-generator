@@ -2,43 +2,62 @@
 
 ## Description
 
-<!-- Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This app will allow you to generate a simple, professional README file through a series of prompts.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn? -->
-
-## Table of Contents (Optional)
-
-<!-- If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license) -->
+The app was built to practice the builder's knowledge and skills in developing basic backend apps, using node.js and using packages such as inquirer (collect information) and fs (read/write data).
 
 ## Installation
 
-<!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
+It is assumed that the user of this app has some basic knowledge in code editing (the app itself can be used through the below steps).
+
+The following are required to use this app:
+
+1. Download the repository 
+
+You can do this through the 'Code' button above this README; for example, you can clone the repository to your local machine.
+
+![Options for downloading the repo](Develop/img/download.png)
+
+2. Node.js
+
+You can skip this step if you already have Node.js in your local machine - you can check your current version in your terminal through the below command:
+
+    node -v
+
+Otherwise, [this link](https://nodejs.dev/en/learn/how-to-install-nodejs/) will highlight some common options to install Node.js - do note that the process may vary between MacOS, Windows and Linux.
+
+Functionality has been confirmed on Node.js version 16.20.0. Note that other versions may not function as intended.
 
 ## Usage
 
-<!-- Provide instructions and examples for use. Include screenshots as needed.
+After performing the basic setup, open the repository that you downloaded / cloned - you can do this in multiple ways, such as through the terminal.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+The most convinient method is through VS Code (source-code editor program), which has a function where you can directly open the terminal in the directory (right-click on the 'Develop' folder, then select 'Open in Integrated Terminal').
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ``` -->
+![Screenshot of the directory, where you can open the integrated terminal](Develop/img/directory.png)
+
+After opening the repository directory (in the 'Develop' folder) in the terminal, enter the following to run the app:
+
+    node index.js
+
+Follow the prompts (example below) then your README will be generated.
+
+![Prompts to follow after initialsing the app](Develop/img/example.png)
+
+Below is a snippet of the README generated using the above responses. Edit the resulting README (the file & file name) to suit your needs.
+
+![snippet of a README generated using this app](Develop/img/sample.png)
 
 ## Credits
 
-<!-- List your collaborators, if any, with links to their GitHub profiles.
+README template based on the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide).
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+It is highly recommended to refer to this guide when editing your README.
 
-If you followed tutorials, include links to those here as well. -->
+### Tutorials:
+[Javascript Promises vs Async Await EXPLAINED (in 5 minutes)](https://www.youtube.com/watch?v%3Dli7FzDHYZpc) by Roberts Dev Talk
+
+[Node.js util.promisify() Method](https://www.geeksforgeeks.org/node-js-util-promisify-method/) by hunter__js
 
 ## License
 

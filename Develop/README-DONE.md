@@ -1,33 +1,34 @@
-# a
+# Funland
 
   ## Description
-  a
+  A repository where fun things happen
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribution](#contribution)
   * [Tests](#tests)
-  * [Credits](#credits)
   * [License](#license)
   * [Contact](#contact)
   
   ## Installation
-  a
+  To be determined
   
   ## Usage
-  a
+  To be determined
   
   ## Contribution
-  a
-  
-  <!-- credits not implemented yet
-  ## Credits
-  undefined -->
+  Guidelines coming soon!
+
+  ## Tests
+  N/A
   
   ## License
-  [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+  Licensed under MIT
   
   ## Contact
-  * GitHub: a
-  * Email: a
+  Please contact from the below options for any additional questions.
+  * GitHub: github_user
+  * Email: github_user@example.com
   
