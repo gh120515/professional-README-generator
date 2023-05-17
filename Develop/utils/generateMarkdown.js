@@ -62,8 +62,9 @@ function generateMarkdown(data) {
   ## Contribution
   ${data.contribution}
   
-  ## Credits
-  ${data.credits}
+  // credits not implemented yet
+  // ## Credits
+  // ${data.credits}
   
   ## License
   ${data.license}
