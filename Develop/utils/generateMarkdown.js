@@ -1,6 +1,6 @@
-// function to create badges with clickable link
-// function renderLicense(license) { 
+// function to set up markdown (README) file
 function generateMarkdown(data) {
+  // first part sets up license badges (with clickable links)
   let licenseChoice = `${data.license}`;
   // If there is no license, return an empty string
   let licenseLink = ''
@@ -29,7 +29,7 @@ function generateMarkdown(data) {
     licenseLink = '[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
   };
 
-
+  // second part to set up markdown template
 
   let template = 
   `# ${data.title}
@@ -37,11 +37,13 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
+  ${licenseLink}
+
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribution](#contribution)
   * [Tests](#tests)
-  * [Credits](#credits)
+  <!-- * [Credits](#credits) -->
   * [License](#license)
   * [Contact](#contact)
   
@@ -53,13 +55,16 @@ function generateMarkdown(data) {
   
   ## Contribution
   ${data.contribution}
+
+  ## Tests
+  ${data.tests}
   
   <!-- credits not implemented yet
   ## Credits
   ${data.credits} -->
   
   ## License
-  ${licenseLink}
+  ${data.license}
   
   ## Contact
   * GitHub: ${data.username}
@@ -70,6 +75,5 @@ function generateMarkdown(data) {
 };
 
 module.exports = {
-  // renderLicense: renderLicense,
   generateMarkdown: generateMarkdown,
 };
