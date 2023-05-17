@@ -24,6 +24,6 @@
   GNU AGPLv3
   
   ## Contact
-  * GitHub: a
+  * GitHub: 
   * Email: a
   

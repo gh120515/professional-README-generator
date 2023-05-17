@@ -42,6 +42,9 @@ function generateMarkdown(data) {
   let template = 
   `# ${data.title}
 
+  ## Description
+  ${data.description}
+
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribution](#contribution)

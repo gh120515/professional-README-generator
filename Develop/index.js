@@ -64,18 +64,9 @@ const questions = ([
     },
 
 ])
-// .then((
-// // read responses from above questions
-//     title,
-//     ) => {
-//     writeToFile(title, template);
-// });
-
-
 
 // function to write README file
 function writeToFile(fileName, data) {
-    // fs.writeFile(`./${fileName.split('').join('')}.md`, data,
     fs.writeFile(fileName, data,
     err => {
         if(err) {
@@ -85,17 +76,22 @@ function writeToFile(fileName, data) {
     }
 )};
 
-
-const createReadme = util.promisify(writeToFile)
-// TODO: Create a function to initialize app
+// util package to use await on inquirer prompts & README file creation (will result in error otherwise due to code execution order)
+const createFile = util.promisify(writeToFile)
+// initialise function on app load (after node index.js)
 async function init() {
+    // try & catch to log error on failure
+    try {
     // initiate the inquirer app 
     const answers = await inquirer.prompt(questions);
     // grab license badges (& links)
     answers.renderLicense = renderLicense(answers.license);
     // generate the markdown app (imported from generateMarkdown.js)
     const generate = generateMarkdown(answers);
-    await createReadme('README-DONE.md', generate);
+    await createFile('README-DONE.md', generate);
+    } catch (err) {
+    console.log(err);
+    }
 };
 
 // Function call to initialize app
